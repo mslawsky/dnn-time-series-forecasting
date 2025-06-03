@@ -53,17 +53,32 @@ Each component is designed for **modularity**, **scalability**, and **maintainab
 
 ## Dataset 📦
 
-- **Source:** Realistic synthetic time series with multiple temporal components
-- **Description:** Simulated data mimicking real-world time series characteristics
-- **Features:** 
-  - **Trend Component:** Long-term directional movement (slope: 0.005)
-  - **Seasonal Patterns:** Annual cycles with 365-day periodicity
-  - **Noise Component:** Realistic random variations (σ = 3)
-  - **Time Span:** 4+ years of daily observations (1461 data points)
-  - **Y-intercept:** Base value of 10 with controlled volatility
-- **Split Strategy:** 80% training (1100 points) / 20% validation (361 points)
-- **Purpose:** Demonstrates neural network effectiveness on complex temporal patterns
+Our synthetic time series combines realistic temporal components to demonstrate neural network effectiveness on complex patterns:
 
+![Generated Time Series Dataset](images/generated_time_series.png)
+
+### **Data Characteristics:**
+- **Source:** Realistic synthetic time series with multiple temporal components
+- **Time Span:** 4+ years of daily observations (1461 data points)
+- **Base Configuration:** Y-intercept of 10 with controlled amplitude of 50
+
+### **Temporal Components:**
+- **Trend Component:** Long-term directional movement (slope: 0.005)
+- **Seasonal Patterns:** Annual cycles with 365-day periodicity  
+- **Noise Component:** Realistic random variations (σ = 3)
+- **Combined Effect:** Mimics real-world time series characteristics
+
+### **Data Split Strategy:**
+- **Training Set:** 80% (1100 data points) - Used for model learning
+- **Validation Set:** 20% (361 data points) - Used for performance evaluation
+- **Split Method:** Temporal split maintaining chronological order
+
+### **Purpose & Design:**
+- **Educational Focus:** Demonstrates progressive forecasting methodology
+- **Complexity Level:** Suitable for neural network pattern recognition
+- **Realism:** Incorporates trend, seasonality, and noise like real-world data
+- **Controlled Environment:** Known components enable method comparison
+  
 ---
 
 ## Getting Started 🛠️
@@ -177,8 +192,6 @@ def windowed_dataset(series, window_size, shuffle=True):
     
     return dataset
 ```
-
-![Generated Time Series](generated_time_series.png)
 
 ### Processing Steps:
 1. **Window Creation:** Sliding windows of configurable size
