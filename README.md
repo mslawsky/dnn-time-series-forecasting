@@ -55,7 +55,7 @@ Each component is designed for **modularity**, **scalability**, and **maintainab
 
 Our synthetic time series combines realistic temporal components to demonstrate neural network effectiveness on complex patterns:
 
-![Generated Time Series Dataset](images/generated_time_series.png)
+![Generated Time Series Dataset](generated_time_series.png)
 
 ### **Data Characteristics:**
 - **Source:** Realistic synthetic time series with multiple temporal components
